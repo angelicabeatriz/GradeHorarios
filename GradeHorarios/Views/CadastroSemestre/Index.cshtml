@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GradeHorarios.Models.CadastroSemestre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodoLetivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Campus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatrizCurricular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semestre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodoLetivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Campus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatrizCurricular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Semestre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

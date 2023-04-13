@@ -1,0 +1,58 @@
+﻿@model GradeHorarios.Models.CadastroSemestre
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CadastroSemestre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriodoLetivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriodoLetivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Curso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Curso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatrizCurricular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatrizCurricular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Semestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semestre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
